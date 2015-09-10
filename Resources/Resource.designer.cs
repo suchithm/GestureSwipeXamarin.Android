@@ -801,6 +801,36 @@ namespace AndroidGesture
 			// aapt resource value: 0x7f020057
 			public const int Icon = 2130837591;
 			
+			// aapt resource value: 0x7f020058
+			public const int icon_aboutus = 2130837592;
+			
+			// aapt resource value: 0x7f020059
+			public const int icon_client = 2130837593;
+			
+			// aapt resource value: 0x7f02005a
+			public const int icon_contactus = 2130837594;
+			
+			// aapt resource value: 0x7f02005b
+			public const int icon_event = 2130837595;
+			
+			// aapt resource value: 0x7f02005c
+			public const int icon_help = 2130837596;
+			
+			// aapt resource value: 0x7f02005d
+			public const int icon_home = 2130837597;
+			
+			// aapt resource value: 0x7f02005e
+			public const int icon_product = 2130837598;
+			
+			// aapt resource value: 0x7f02005f
+			public const int icon_service = 2130837599;
+			
+			// aapt resource value: 0x7f020060
+			public const int icon_solution = 2130837600;
+			
+			// aapt resource value: 0x7f020061
+			public const int menu_icon = 2130837601;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -901,17 +931,26 @@ namespace AndroidGesture
 			// aapt resource value: 0x7f090027
 			public const int image = 2131296295;
 			
+			// aapt resource value: 0x7f09003f
+			public const int imgProfilePic = 2131296319;
+			
+			// aapt resource value: 0x7f090042
+			public const int ivMenuImg = 2131296322;
+			
 			// aapt resource value: 0x7f090006
 			public const int listMode = 2131296262;
 			
 			// aapt resource value: 0x7f090029
 			public const int list_item = 2131296297;
 			
+			// aapt resource value: 0x7f09003d
+			public const int menuIconImgView = 2131296317;
+			
+			// aapt resource value: 0x7f090041
+			public const int menuListView = 2131296321;
+			
 			// aapt resource value: 0x7f090018
 			public const int middle = 2131296280;
-			
-			// aapt resource value: 0x7f09003c
-			public const int myButton = 2131296316;
 			
 			// aapt resource value: 0x7f090012
 			public const int never = 2131296274;
@@ -985,8 +1024,20 @@ namespace AndroidGesture
 			// aapt resource value: 0x7f09002b
 			public const int title = 2131296299;
 			
+			// aapt resource value: 0x7f09003c
+			public const int titleBarLinearLayout = 2131296316;
+			
 			// aapt resource value: 0x7f090020
 			public const int top_action_bar = 2131296288;
+			
+			// aapt resource value: 0x7f09003e
+			public const int txtActionBarText = 2131296318;
+			
+			// aapt resource value: 0x7f090043
+			public const int txtMnuText = 2131296323;
+			
+			// aapt resource value: 0x7f090040
+			public const int txtPage = 2131296320;
 			
 			// aapt resource value: 0x7f090021
 			public const int up = 2131296289;
@@ -1102,7 +1153,10 @@ namespace AndroidGesture
 			public const int Main = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int support_simple_spinner_dropdown_item = 2130903065;
+			public const int MenuCustomLayout = 2130903065;
+			
+			// aapt resource value: 0x7f03001a
+			public const int support_simple_spinner_dropdown_item = 2130903066;
 			
 			static Layout()
 			{

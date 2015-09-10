@@ -69,6 +69,17 @@
     <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\layout\MenuCustomLayout.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon_aboutus.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon_client.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon_contactus.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon_event.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon_help.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon_home.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon_product.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon_service.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon_solution.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
 </Project>

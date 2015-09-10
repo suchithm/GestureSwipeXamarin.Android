@@ -14,6 +14,7 @@ namespace AndroidGesture
 	{
 		public event Action LeftEvent;
 		public event Action RightEvent;
+		public event Action SingleTapEvent;
 		private static int SWIPE_MAX_OFF_PATH = 250;
 		private static int SWIPE_MIN_DISTANCE = 100;
 		private static int SWIPE_THRESHOLD_VELOCITY = 200;
@@ -31,8 +32,8 @@ namespace AndroidGesture
 				// right to left swipe
 				if ( e1.GetX () - e2.GetX () > SWIPE_MIN_DISTANCE && Math.Abs ( velocityX ) > SWIPE_THRESHOLD_VELOCITY && LeftEvent != null )
 				{
-					
-					LeftEvent ();//Toast.MakeText(view.Context, "Left Swipe", ToastLength.Short).Show();G
+					RightEvent ();
+					//Toast.MakeText(view.Context, "Left Swipe", ToastLength.Short).Show();G
 				
 				}
 				else if ( e2.GetX () - e1.GetX () > SWIPE_MIN_DISTANCE && Math.Abs ( velocityX ) > SWIPE_THRESHOLD_VELOCITY && RightEvent != null )
@@ -41,7 +42,7 @@ namespace AndroidGesture
 					{
 					Console.WriteLine("e1.GetX() : "+	e1.GetX());
 					Console.WriteLine("e2.GetX() : "+	e2.GetX()); 
-					RightEvent ();// Toast.MakeText(view.Context, "Right Swipe", ToastLength.Short).Show(); 
+					LeftEvent ();// Toast.MakeText(view.Context, "Right Swipe", ToastLength.Short).Show(); 
 					}
 				}
 			}
@@ -62,9 +63,14 @@ namespace AndroidGesture
 		{ 
 			return true; 
 		}
-		public void OnShowPress(MotionEvent e) {}
+		public void OnShowPress(MotionEvent e) 
+		{
+			
+		}
 		public bool OnSingleTapUp(MotionEvent e) 
 		{ 
+			SingleTapEvent ();
+			Console.WriteLine ( "Single tap up" );
 			return true;
 		}	
 	}
