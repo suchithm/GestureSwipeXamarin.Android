@@ -799,37 +799,43 @@ namespace AndroidGesture
 			public const int abc_textfield_searchview_right_holo_light = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int Icon = 2130837591;
+			public const int down_arrow = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int icon_aboutus = 2130837592;
+			public const int Icon = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int icon_client = 2130837593;
+			public const int icon_aboutus = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int icon_contactus = 2130837594;
+			public const int icon_client = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int icon_event = 2130837595;
+			public const int icon_contactus = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int icon_help = 2130837596;
+			public const int icon_event = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int icon_home = 2130837597;
+			public const int icon_help = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int icon_product = 2130837598;
+			public const int icon_home = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int icon_service = 2130837599;
+			public const int icon_product = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int icon_solution = 2130837600;
+			public const int icon_service = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int menu_icon = 2130837601;
+			public const int icon_solution = 2130837601;
+			
+			// aapt resource value: 0x7f020062
+			public const int menu_icon = 2130837602;
+			
+			// aapt resource value: 0x7f020063
+			public const int up_arrow = 2130837603;
 			
 			static Drawable()
 			{
@@ -886,6 +892,9 @@ namespace AndroidGesture
 			// aapt resource value: 0x7f090016
 			public const int beginning = 2131296278;
 			
+			// aapt resource value: 0x7f090042
+			public const int btnImgExpander = 2131296322;
+			
 			// aapt resource value: 0x7f09002d
 			public const int checkbox = 2131296301;
 			
@@ -934,8 +943,8 @@ namespace AndroidGesture
 			// aapt resource value: 0x7f09003f
 			public const int imgProfilePic = 2131296319;
 			
-			// aapt resource value: 0x7f090042
-			public const int ivMenuImg = 2131296322;
+			// aapt resource value: 0x7f090044
+			public const int ivMenuImg = 2131296324;
 			
 			// aapt resource value: 0x7f090006
 			public const int listMode = 2131296262;
@@ -946,8 +955,8 @@ namespace AndroidGesture
 			// aapt resource value: 0x7f09003d
 			public const int menuIconImgView = 2131296317;
 			
-			// aapt resource value: 0x7f090041
-			public const int menuListView = 2131296321;
+			// aapt resource value: 0x7f090043
+			public const int menuListView = 2131296323;
 			
 			// aapt resource value: 0x7f090018
 			public const int middle = 2131296280;
@@ -1033,8 +1042,11 @@ namespace AndroidGesture
 			// aapt resource value: 0x7f09003e
 			public const int txtActionBarText = 2131296318;
 			
-			// aapt resource value: 0x7f090043
-			public const int txtMnuText = 2131296323;
+			// aapt resource value: 0x7f090041
+			public const int txtDescription = 2131296321;
+			
+			// aapt resource value: 0x7f090045
+			public const int txtMnuText = 2131296325;
 			
 			// aapt resource value: 0x7f090040
 			public const int txtPage = 2131296320;

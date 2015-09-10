@@ -14,8 +14,7 @@ namespace AndroidGesture
 {
 	[Activity ( Label = "SlidingMenu" , MainLauncher = true , Icon = "@drawable/icon" )]
 	public class MainActivity : Activity
-	{
-		//http://forums.xamarin.com/discussion/comment/40052/
+	{ 
 		GestureDetector gestureDetector;
 		GestureListener gestureListener;
 
@@ -26,18 +25,16 @@ namespace AndroidGesture
 		bool isSingleTapFired=false;
 		TextView txtActionBarText;
 		TextView txtPageName;
+		TextView txtDescription;
+		ImageView btnDescExpander;
 		protected override void OnCreate ( Bundle bundle )
 		{
 			base.OnCreate ( bundle );
 			Window.RequestFeature ( WindowFeatures.NoTitle );
-			SetContentView ( Resource.Layout.Main );
-
-			FnInitialization ();
-
-			TapEvent (); 
-
-			FnBindMenu ();
-
+			SetContentView ( Resource.Layout.Main ); 
+			FnInitialization (); 
+			TapEvent ();  
+			FnBindMenu (); 
 		}
 		void TapEvent()
 		{
@@ -48,6 +45,10 @@ namespace AndroidGesture
 					FnToggleMenu ();
 					isSingleTapFired = false;
 				}
+			};
+			btnDescExpander.Click += delegate(object sender , EventArgs e )
+			{
+				FnDescriptionWindowToggle();
 			};
 		}
 		void FnInitialization()
@@ -63,7 +64,8 @@ namespace AndroidGesture
 			menuIconImageView = FindViewById<ImageView> ( Resource.Id.menuIconImgView );
 			txtActionBarText = FindViewById<TextView> ( Resource.Id.txtActionBarText );
 			txtPageName=FindViewById<TextView> ( Resource.Id.txtPage );
-
+			txtDescription=FindViewById<TextView> ( Resource.Id.txtDescription );
+			btnDescExpander =FindViewById<ImageView> ( Resource.Id.btnImgExpander );
 			//changed sliding menu width to 1/3 of screen width 
 			Display display = this.WindowManager.DefaultDisplay; 
 			var point = new Point ();
@@ -101,7 +103,7 @@ namespace AndroidGesture
 		void FnToggleMenu()
 		{
 			Console.WriteLine ( menuListView.IsShown );
-			if(menuListView.Visibility==ViewStates.Visible)
+			if(menuListView.IsShown)
 			{ 
 				menuListView.Animation = new  TranslateAnimation ( 0f , -menuListView.MeasuredWidth , 0f , 0f );
 				menuListView.Animation.Duration = 300;
@@ -116,16 +118,18 @@ namespace AndroidGesture
 			}
 		} 
 		#endregion 
+	
+		#region "Gesture function "
 		void GestureLeft()
 		{
-			if(menuListView.Visibility==ViewStates.Invisible||menuListView.Visibility==ViewStates.Gone)
-			FnToggleMenu (); 
+			if(!menuListView.IsShown)
+				FnToggleMenu (); 
 			isSingleTapFired = false; 
 		}
 		void GestureRight()
 		{
-			if(menuListView.Visibility==ViewStates.Visible)
-			FnToggleMenu (); 
+			if(menuListView.IsShown)
+				FnToggleMenu (); 
 			isSingleTapFired = false; 
 		}
 		void SingleTap()
@@ -145,6 +149,28 @@ namespace AndroidGesture
 			gestureDetector.OnTouchEvent ( ev );
 			return base.DispatchTouchEvent (ev); 
 		}
+		#endregion
+
+		#region "Description toggle window"
+		void FnDescriptionWindowToggle()
+		{
+			if(txtDescription.IsShown)
+			{  
+				txtDescription.Visibility = ViewStates.Gone; 
+				txtDescription.Animation = new  TranslateAnimation ( 0f ,0f,0f,txtDescription.MeasuredHeight  );
+				txtDescription.Animation.Duration = 300;
+				btnDescExpander.SetImageResource ( Resource.Drawable.up_arrow ); 
+			}
+			else
+			{    
+				txtDescription.Visibility =   ViewStates.Visible;
+				txtDescription.RequestFocus (); 
+				txtDescription.Animation = new  TranslateAnimation ( 0f , 0f ,txtDescription.MeasuredHeight,0f);
+				txtDescription.Animation.Duration = 300;   
+				btnDescExpander.SetImageResource ( Resource.Drawable.down_arrow );
+			}
+		}
+		#endregion
 	}
 
 	#region " Menu list adapter"

@@ -80,6 +80,8 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon_product.png" />
     <AndroidResource Include="Resources\drawable-hdpi\icon_service.png" />
     <AndroidResource Include="Resources\drawable-hdpi\icon_solution.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\down_arrow.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\up_arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
 </Project>

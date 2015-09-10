@@ -59,10 +59,31 @@
         android:textSize="25dp"
         android:layout_centerHorizontal="true"
         android:textStyle="bold" />
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textColor="#000000"
+        android:text="Desription goes here"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:textSize="18dp"
+        android:layout_above="@+id/btnImgExpander"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:visibility="gone" />
+    <ImageView
+        android:id="@+id/btnImgExpander"
+        android:layout_alignParentBottom="true"
+        android:layout_height="30dp"
+        android:layout_width="match_parent"
+        android:src="@drawable/up_arrow"
+        android:background="#fff2f2f2" />
     <ListView
         android:id="@+id/menuListView"
         android:layout_below="@+id/titleBarLinearLayout"
         android:background="#ff64bbf8"
+        android:divider="#CFEBFF"
         android:dividerHeight="1dp"
         android:layout_marginLeft="0dp"
         android:layout_height="match_parent"

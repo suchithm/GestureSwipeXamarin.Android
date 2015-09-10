@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using Android.Views;
-using Android.Widget;
 namespace AndroidGesture
 {
 	class GestureListener: Java.Lang.Object, GestureDetector.IOnGestureListener
@@ -32,8 +24,7 @@ namespace AndroidGesture
 				// right to left swipe
 				if ( e1.GetX () - e2.GetX () > SWIPE_MIN_DISTANCE && Math.Abs ( velocityX ) > SWIPE_THRESHOLD_VELOCITY && LeftEvent != null )
 				{
-					RightEvent ();
-					//Toast.MakeText(view.Context, "Left Swipe", ToastLength.Short).Show();G
+					RightEvent (); 
 				
 				}
 				else if ( e2.GetX () - e1.GetX () > SWIPE_MIN_DISTANCE && Math.Abs ( velocityX ) > SWIPE_THRESHOLD_VELOCITY && RightEvent != null )
@@ -42,13 +33,12 @@ namespace AndroidGesture
 					{
 					Console.WriteLine("e1.GetX() : "+	e1.GetX());
 					Console.WriteLine("e2.GetX() : "+	e2.GetX()); 
-					LeftEvent ();// Toast.MakeText(view.Context, "Right Swipe", ToastLength.Short).Show(); 
+					LeftEvent (); 
 					}
 				}
 			}
 			catch ( Exception e )
-			{
-				// nothing
+			{ 
 				Console.WriteLine ( "Gesture listener didn't worked properly..." +e.Message);
 			}
 			return false;
